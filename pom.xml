@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.5.RELEASE</version>
+  </parent>
+
+
+  <groupId>com.miaoshaproject</groupId>
+  <artifactId>miaosha</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>miaosha</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--springboot的web应用依赖-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!--引入mybatis依赖-->
+    <!--引入mysql数据库驱动依赖-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.41</version>
+    </dependency>
+    <!--引入数据库连接池管理数据库连接，使用druid-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.6</version>
+    </dependency>
+    <!--引入mybatis对springboot支持的依赖-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+      <!--StringUtls工具类依赖-->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.7</version>
+      </dependency>
+
+
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+
+        <!--配置根据数据库表自动生成对应的接口类和sql操作映射文件-->
+        <!--maven支持插件-->
+      <plugin>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-maven-plugin</artifactId>
+            <version>1.3.7</version>
+            <configuration>
+                <configurationFile>src/main/resources/mybatis-generator.xml</configurationFile>
+                <verbose>true</verbose>
+                <overwrite>true</overwrite>
+            </configuration>
+             <executions>
+                 <execution>
+                     <id>Generate MyBatis Artifacts</id>
+                     <goals>
+                         <goal>generate</goal>
+                     </goals>
+                 </execution>
+             </executions>
+             <dependencies>
+                 <dependency>
+                     <groupId>org.mybatis.generator</groupId>
+                     <artifactId>mybatis-generator-core</artifactId>
+                     <version>1.3.7</version>
+                 </dependency>
+                 <dependency>
+                     <groupId>mysql</groupId>
+                     <artifactId>mysql-connector-java</artifactId>
+                     <version>5.1.41</version>
+                 </dependency>
+
+             </dependencies>
+         </plugin>
+    </plugins>
+
+  </build>
+</project>
