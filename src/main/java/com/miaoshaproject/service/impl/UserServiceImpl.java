@@ -8,6 +8,8 @@ import com.miaoshaproject.error.BusinessException;
 import com.miaoshaproject.error.EmBusinessError;
 import com.miaoshaproject.service.UserService;
 import com.miaoshaproject.service.model.UserModel;
+import com.miaoshaproject.validator.ValidationResult;
+import com.miaoshaproject.validator.ValidatorImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,10 @@ public class UserServiceImpl implements UserService {
     //注入用户密码Mapper组件
     @Autowired
     private UserPasswordDoMapper userPasswordDoMapper;
+
+
+    @Autowired
+    private ValidatorImpl validator;
 
     @Override
     public UserModel getUserById(Integer id) {
@@ -76,15 +82,27 @@ public class UserServiceImpl implements UserService {
         if(userModel==null){
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
         }
+
+
         //判断userModel的各个字段
         //String类型的使用StringUtils判断
-        if(StringUtils.isEmpty(userModel.getName())
-            || userModel.getGender()==null
-            || userModel.getAge()==null
-            || StringUtils.isEmpty(userModel.getTelephone())){
+//        if(StringUtils.isEmpty(userModel.getName())
+//            || userModel.getGender()==null
+//            || userModel.getAge()==null
+//            || StringUtils.isEmpty(userModel.getTelephone())){
+//
+//            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
+//        }
 
-            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
+        //使用validator校验userModel的各个属性是否符合校验规则
+        ValidationResult validationResult = validator.validate(userModel);
+        //验证userModel，如果有错误，会将这个boolean置为true
+        if(validationResult.isHasErrors()){
+            //抛异常，封装错误信息
+            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,validationResult.getErrMsg());
         }
+
+
         //都不为null，创建UserDO封装
         //实现model->dataObject方法
         UserDo userDO = convertUserModel2UserDO(userModel);
