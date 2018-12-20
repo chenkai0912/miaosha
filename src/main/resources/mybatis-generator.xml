@@ -54,13 +54,25 @@
         <!--生成对应的表及类名
             不生成复杂操作的Example类
         -->
-        <table tableName="user_info" domainObjectName="UserDo"
+       <!-- <table tableName="user_info" domainObjectName="UserDo"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
         <table tableName="user_password" domainObjectName="UserPasswordDo"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>-->
+        <table tableName="item" domainObjectName="ItemDo"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="item_stock" domainObjectName="ItemStockDo"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

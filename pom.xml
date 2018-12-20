@@ -89,7 +89,8 @@
             <configuration>
                 <configurationFile>src/main/resources/mybatis-generator.xml</configurationFile>
                 <verbose>true</verbose>
-                <overwrite>true</overwrite>
+                <!--是否覆盖生成的-->
+                <overwrite>false</overwrite>
             </configuration>
              <executions>
                  <execution>

@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2209b576-8216-4d39-b346-fc403996d58f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/viewobject/ItemVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/ItemModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/controller/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/controller/viewobject/UserVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/dao/UserDoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/dao/UserPasswordDoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/dataobject/UserDo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/dataobject/UserPasswordDo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/error/BusinessException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/error/CommonError.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/error/EmBusinessError.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/response/CommonReturnType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miaoshaproject/service/model/UserModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,51 +25,52 @@
     <session id="-1160613300">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.45" value="2" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="86" />
+          <entry key="java" value="118" />
           <entry key="pom" value="2" />
-          <entry key="properties" value="1" />
-          <entry key="xml" value="18" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="86" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="20" />
+          <entry key="JAVA" value="118" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8812" />
+          <entry key="dummy" value="4" />
+          <entry key="java" value="11857" />
           <entry key="properties" value="396" />
           <entry key="txt" value="34" />
-          <entry key="xml" value="2036" />
+          <entry key="xml" value="2132" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8812" />
-          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="JAVA" value="11857" />
+          <entry key="PLAIN_TEXT" value="38" />
           <entry key="Properties" value="396" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="2035" />
+          <entry key="XML" value="2131" />
         </counts>
       </usages-collector>
     </session>
@@ -89,10 +78,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="25">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,10 +99,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidatorImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/ItemModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="315">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,10 +111,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/ItemDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="252">
+              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/ItemServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1113">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,28 +132,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ItemDoMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidationResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="189">
+              <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -157,8 +146,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -166,6 +155,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>KNOWN_ERROR</find>
+      <find>p</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,26 +172,35 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/application.properties.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/App.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/UserPasswordDoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/viewobject/UserVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/response/CommonReturnType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/error/BusinessException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/error/CommonError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/UserDoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/error/EmBusinessError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidationResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ItemDoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/ItemModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ItemStockDoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/ItemStockDoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/viewobject/ItemVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/ItemServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -255,6 +254,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,7 +295,64 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
-              <item name="validator" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="viewobject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="dataobject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miaoshaproject" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
@@ -304,12 +361,19 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,12 +466,13 @@
       <workItem from="1544665315085" duration="10429000" />
       <workItem from="1545009939021" duration="18732000" />
       <workItem from="1545095597228" duration="9036000" />
-      <workItem from="1545183748113" duration="3956000" />
+      <workItem from="1545183748113" duration="14841000" />
+      <workItem from="1545268310263" duration="10668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79663000" />
+    <option name="totallyTimeSpent" value="101216000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,15 +487,15 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.28539577" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.31403118" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.30769232" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.31326646" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
@@ -491,27 +556,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/UserDoExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/UserDo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34-sources.jar!/javax/servlet/http/HttpServletRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2856">
@@ -550,13 +594,6 @@
     <entry file="file://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.pom">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/UserPasswordDo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -585,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/error/BusinessException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -599,54 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/response/CommonReturnType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/error/CommonError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/UserDoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -664,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-generator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/NotBlank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -682,62 +661,259 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidationResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-          </folding>
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidatorImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/UserDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/UserPasswordDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="273">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="393">
+          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="72" column="44" lean-forward="true" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="1974">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/validator/ValidatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/ItemStockDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/ItemStockDoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ItemStockDoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/viewobject/ItemVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/response/CommonReturnType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/UserDoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserDoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserPasswordDoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.9.RELEASE/spring-beans-5.0.9.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dao/ItemDoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ItemDoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/impl/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1113">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/service/model/ItemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/miaoshaproject/dataobject/ItemDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
         </state>
       </provider>
     </entry>
