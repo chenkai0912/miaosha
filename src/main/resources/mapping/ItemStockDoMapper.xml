@@ -121,4 +121,14 @@
       item_id = #{itemId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--减库存，更新库存表
+    当当前的库存大于传入的购买数量时，执行库存更新，减库存。
+  -->
+  <update id="decreaseStock">
+
+    update item_stock
+    set stock = stock - #{amount}
+    where item_id = #{itemId} and stock >= #{amount}
+  </update>
 </mapper>

@@ -137,6 +137,48 @@ public class ItemServiceImpl implements ItemService {
 
     }
 
+
+    //扣减库存
+    @Override
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) throws BusinessException {
+        /*
+            item商品表大部分用户查询，查询对应的商品信息
+            库存表，在某些高压力的情况下做降级
+            比如在微服务下，库存服务可以拆为item的展示服务（item表）和item的库存服务（item_stock表）
+            这个item的库存服务独立出来，专门进行库存减操作。
+            目前只操作item_stock表，为保证冻结操作的原子性，对item_stock表加锁，针对某一条记录进行加行锁，减掉对应的库存
+            看减完后是否还大于表中库存。
+
+            修改itemStockDoMapper映射文件，修改sql语句
+
+         */
+        //返回影响的条目数
+        //sql成功执行返回的影响条目数不一定为1，如果购买数量大于库存，超卖，sql语句也会执行，但返回的就是0
+        int affectRow = itemStockDoMapper.decreaseStock(itemId, amount);
+        if(affectRow>0){
+            //更新库存成功
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    /**
+     * 商品销量增加
+     * @param id
+     * @param amount
+     * @throws BusinessException
+     */
+    @Override
+    @Transactional
+    public void increaseSales(Integer id, Integer amount) throws BusinessException {
+
+        itemDoMapper.increaseSales(id,amount);
+
+    }
+
     //将dataobject转换成Model领域模型
     private ItemModel convertModelFromDataObject(ItemDo itemDo,ItemStockDo itemStockDo){
 

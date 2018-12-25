@@ -70,8 +70,12 @@
           <artifactId>hibernate-validator</artifactId>
           <version>6.0.13.Final</version>
       </dependency>
-
-
+      <dependency>
+          <groupId>org.jetbrains</groupId>
+          <artifactId>annotations</artifactId>
+          <version>RELEASE</version>
+          <scope>compile</scope>
+      </dependency>
 
 
   </dependencies>

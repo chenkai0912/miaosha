@@ -50,6 +50,12 @@
 			</div>
 		
 		</div>
+		<div class="form-actions">
+			<button class="btn blue" id="createorder" type="submit">
+				下单
+			</button>
+			
+		</div>
 </body>
 <script>
 
@@ -68,6 +74,39 @@
 
 	jQuery(document).ready(function(){
 			
+			//下单ajax请求
+			$("#createorder").on("click",function(){
+
+				$.ajax({
+					type:"POST",
+					contentType:"application/x-www-form-urlencoded",
+					url:"http://localhost:8090/order/createorder",
+					xhrFields:{withCredentials:true},
+					data:{
+						"itemId":g_itemVO.id,
+						"amount":1,
+					},
+					success:function(data){
+						if(data.status =="success"){
+							alert("下单成功！");
+							window.location.reload();
+						}else{
+							alert("下单失败！原因为"+data.data.errMsg);
+							if(data.data.errCode=="20002")
+								window.location.href="login.html";
+						}
+
+					},
+					error:function(data){
+						alert("下单失败！原因为"+data.responseText);
+					}
+				});
+
+
+			});
+
+
+
 			//获取商品详情
 			$.ajax({
 				type:"GET",
