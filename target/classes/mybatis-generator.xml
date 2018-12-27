@@ -66,7 +66,7 @@
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false"></table>-->
-        <table tableName="sequence_info" domainObjectName="SequenceDo"
+        <table tableName="promo" domainObjectName="PromoDo"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

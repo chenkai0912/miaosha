@@ -12,6 +12,13 @@
 <body class="login">
 	<div class="content">
 		<h3 class="form-title">商品详情</h3>
+		<!-- 仅在有秒杀活动时显示 -->
+		<div id="promoStartTimeContainer" class="form-group">
+			<label style="color: blue" id="promoStatus" class="control-label"></label>
+			<div>
+				<label style="color: red" class="control-label" id="promoStartTime"/>
+			</div>
+		</div>
 		<div class="form-group">
 			
 			<div>
@@ -24,10 +31,17 @@
 				<label class="control-lable" id="description"/>
 			</div>
 		</div>
-		<div class="form-group">
+		<div id="normalprice" class="form-group">
 			<label class="control-label">价格</label>
 			<div>
 				<label class="control-label" id="price"/>
+			</div>
+		</div>
+		<!-- 仅在有秒杀活动时显示 -->
+		<div id="promoPriceContainer" class="form-group">
+			<label style="color: red" class="control-label">秒杀价格</label>
+			<div>
+				<label style="color: red" class="control-label" id="promoPrice"/>
 			</div>
 		</div>
 		<div class="form-group">
@@ -85,6 +99,7 @@
 					data:{
 						"itemId":g_itemVO.id,
 						"amount":1,
+						"promoId":g_itemVO.promoId
 					},
 					success:function(data){
 						if(data.status =="success"){
@@ -120,6 +135,9 @@
 					if(data.status =="success"){
 						g_itemVO = data.data;
 						reloadDom();
+						/*设置一个定时器，到秒杀时间后，自动放开下单按钮*/
+						/*每隔1秒钟，执行一次*/
+						setInterval(reloadDom,1000);
 					}else{
 						alert("获取商品详情失败！原因为"+data.data.errMsg);
 					}
@@ -139,6 +157,41 @@
 		$("#price").text(g_itemVO.price);
 		$("#imgUrl").attr("src",g_itemVO.imgUrl);
 		$("#sales").text(g_itemVO.sales);
+
+		//秒杀还未开始，展示开始时间
+		if(g_itemVO.promoStatus == 1){
+			
+			var startTime = g_itemVO.startTime.replace(new RegExp("-","gm"),"/");
+			//转为毫秒
+			startTime = (new Date(startTime)).getTime();
+			//当前时间转为毫秒
+			var nowTime = Date.parse(new Date());
+			var delta = (startTime-nowTime)/1000;
+
+			//活动开始了
+			if(delta<=0){
+
+				g_itemVO.promoStatus = 2;
+				reloadDom();
+
+			}
+
+			$("#promoStartTime").text("该商品将于"+g_itemVO.startTime+"开始秒杀 倒计时："+delta+"秒");
+			//展示秒杀价格
+			$("#promoPrice").text(g_itemVO.promoPrice);
+			//临近秒杀，将正常下单按钮禁用
+			$("#createorder").attr("disabled",true);
+
+		//秒杀正在进行
+		}else if(g_itemVO.promoStatus == 2){
+			$("#promoStartTime").text("秒杀正在进行...");
+			//展示秒杀价格
+			$("#promoPrice").text(g_itemVO.promoPrice);
+			//秒杀正在进行，放开下单按钮
+			$("#createorder").attr("disabled",false);
+			//将原价隐藏掉
+			$("#normalprice").hide();
+		}
 
 
 	}

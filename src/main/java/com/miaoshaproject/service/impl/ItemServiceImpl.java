@@ -7,7 +7,9 @@ import com.miaoshaproject.dataobject.ItemStockDo;
 import com.miaoshaproject.error.BusinessException;
 import com.miaoshaproject.error.EmBusinessError;
 import com.miaoshaproject.service.ItemService;
+import com.miaoshaproject.service.PromoService;
 import com.miaoshaproject.service.model.ItemModel;
+import com.miaoshaproject.service.model.PromoModel;
 import com.miaoshaproject.validator.ValidationResult;
 import com.miaoshaproject.validator.ValidatorImpl;
 
@@ -36,6 +38,10 @@ public class ItemServiceImpl implements ItemService {
     //注入ItemStockMapper组件
     @Autowired
     private ItemStockDoMapper itemStockDoMapper;
+
+    //注入秒杀活动组件
+    @Autowired
+    private PromoService promoService;
 
     //创建商品，需要事务，在方法上添加
     @Override
@@ -133,6 +139,17 @@ public class ItemServiceImpl implements ItemService {
         //根据item_id查出stock
         ItemStockDo itemStockDo = itemStockDoMapper.selectByItemId(itemDo.getId());
         ItemModel itemModel = convertModelFromDataObject(itemDo, itemStockDo);
+
+        //获取活动商品信息
+        PromoModel promoModel = promoService.getPromoByItemId(itemModel.getId());
+
+        //如果存在该商品秒杀对象并且秒杀状态不等于3,说明秒杀有效
+        if(promoModel!=null && promoModel.getStatus().intValue()!=3){
+            //将秒杀对象聚合进ItemModel，将该商品和秒杀对象关联起来
+            itemModel.setPromoModel(promoModel);
+        }
+
+
         return itemModel;
 
     }
